@@ -1,6 +1,7 @@
 .pc-wr {
     position: relative;
-    max-width: 250px;
+    justify-content: space-between;
+    max-width: 270px;
     padding: 0.75rem;
     border-radius: 5px;
     gap: 0.5rem;

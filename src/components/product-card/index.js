@@ -1,20 +1,7 @@
 import "./product-card.css";
 
-export const ProductCard = () => {
-    const product = {
-        id: 1,
-        productName: "Full Sleeve Solid Men Casual Jacket",
-        brand: "BEING HUMAN",
-        oriPrice: 5999,
-        discPrice: 2400,
-        discount: 59,
-        size: ["S", "M", "XL", "XXL"],
-        fcAssured: true,
-        productImg: "https://rukminim1.flixcart.com/image/832/832/xif0q/jacket/h/o/o/l-yes-bhji21514-olive-being-human-original-imaggw4q9pequ5yy.jpeg?q=70"
-    }
-
+export const ProductCard = ({ product }) => {
     const {
-        id,
         productName,
         brand,
         oriPrice,

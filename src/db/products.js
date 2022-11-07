@@ -1,16 +1,5 @@
 export const products = [
     {
-        id: 1,
-        productName: "Full Sleeve Solid Men Casual Jacket",
-        brand: "BEING HUMAN",
-        oriPrice: 5999,
-        discPrice: 2400,
-        discount: 59,
-        size: ["S", "M", "XL", "XXL"],
-        fcAssured: true,
-        productImg: "https://rukminim1.flixcart.com/image/832/832/xif0q/jacket/h/o/o/l-yes-bhji21514-olive-being-human-original-imaggw4q9pequ5yy.jpeg?q=70"
-    },
-    {
         id: 2,
         productName: "Full Sleeve Solid Men Casual Jacket",
         brand: "DUCATI",
@@ -66,17 +55,6 @@ export const products = [
         productImg: "https://rukminim1.flixcart.com/image/832/832/ksoz53k0/jacket/d/q/u/m-1-no-67029102-puma-original-imag67esprxubgzz.jpeg?q=70" 
     },
     {
-        id: 7,
-        productName: "ESS Track TR Full Sleeve Solid Men Casual Jacket",
-        brand: "PUMA",
-        oriPrice: 1199,
-        discPrice: 2999,
-        discount: 60,
-        size: ["XS", "S", "M", "L", "XL", "XXL"],
-        fcAssured: false,
-        productImg: "https://rukminim1.flixcart.com/image/832/832/xif0q/jacket/h/x/t/xs-58669603-puma-original-imagyw6y5fdqgdjq-bb.jpeg?q=70" 
-    },
-    {
         id: 8,
         productName: "M Flc Jkt 3 Full Sleeve Colorblock Men Casual Jacket",
         brand: "Wildcraft",
@@ -118,7 +96,7 @@ export const products = [
         discount: 32,
         size: ["XS", "S", "M", "L", "XL", "XXL"],
         fcAssured: true,
-        productImg: "https://www.flipkart.com/wildcraft-full-sleeve-colorblock-men-jacket/p/itm2f1553f1ad7cb?pid=JCKFJFYNZVYBW6C2&lid=LSTJCKFJFYNZVYBW6C2SJQQ0D&marketplace=FLIPKART&store=clo%2Fqvw%2Fz0g%2Fjbm&srno=b_3_93&otracker=browse&fm=organic&iid=1805d6bf-7ad4-4f82-922d-7d5889258f9a.JCKFJFYNZVYBW6C2.SEARCH&ppt=browse&ppn=browse&ssid=m2v28fousrw2sveo1667826532198" 
+        productImg: "https://rukminim1.flixcart.com/image/832/832/xif0q/jacket/u/l/v/m-no-30784-wildcraft-original-imag7aypjhsach7q-bb.jpeg?q=70" 
     },
     {
         id: 12,
