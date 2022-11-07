@@ -1,0 +1,25 @@
+@import url("./variables.css");
+
+* {
+    padding: 0;
+    border: none;
+    outline: none;
+    margin: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+body {
+    color: var(--black);
+    font-family: var(--font);
+}
+
+.fx-c {
+    display: flex;
+    flex-direction: column;
+}
+
+.fx-r {
+    display: flex;
+    flex-direction: row;
+}
