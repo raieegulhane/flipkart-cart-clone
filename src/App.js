@@ -1,10 +1,12 @@
 import "./styles/style.css"
-import { ProductListing } from "./components";
+import { Navbar } from "./components";
+import { SiteRoutes } from "./site-routes.js";
 
 function App() {
   return (
     <div className="App">
-      <ProductListing />
+      <Navbar />
+      <SiteRoutes />
     </div>
   );
 }

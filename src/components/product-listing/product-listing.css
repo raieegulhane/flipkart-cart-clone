@@ -1,3 +1,7 @@
+.pl-wr {
+    padding: 1rem;
+}
+
 .pl-cn {
     flex-wrap: wrap;
     gap: 1rem;
