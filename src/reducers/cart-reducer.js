@@ -33,7 +33,28 @@ const cartReducerFunction = (state, { type, payload }) => {
                 {
                     ...state, 
                     cart: [ ...cart ].filter(({ id }) => id !== payload.id),
+                    cartQty: cartQty - 1,
+                    cartTotal: cartTotal - payload.discPrice,
                     saveForLater: [ ...saveForLater, payload ]
+                }
+            );
+
+        case "MOVE_TO_CART":
+            return(
+                {
+                    ...state,
+                    cart: [ ...cart, payload ],
+                    cartQty: cartQty + 1,
+                    cartTotal: cartTotal + payload.discPrice,
+                    saveForLater: [ ...saveForLater ].filter((item) => item !== payload)
+                }
+            );
+        
+        case "DELETE_FROM_SAVE_FOR_LATER":
+            return(
+                {
+                    ...state,
+                    saveForLater: [ ...saveForLater ].filter((item) => item !== payload)
                 }
             );
 

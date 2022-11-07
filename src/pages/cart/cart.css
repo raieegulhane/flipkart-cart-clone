@@ -1,0 +1,19 @@
+.cart-wr {
+    padding: 0 1rem;
+}
+
+.cart-head {
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--grey1);
+}
+
+.cart-h2 {
+    text-decoration: underline;
+    padding: 2.5rem 2rem 0rem;
+}
+
+.cart-items-cn {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--grey1);
+}

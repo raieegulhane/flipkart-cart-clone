@@ -1,15 +1,17 @@
 import "./product-listing.css";
-import { products } from "../../db/products";
 import { ProductCard } from "..";
 
-export const ProductListing = () => {
+export const ProductListing = ({ db, forComp }) => {
     return(
         <main className="pl-wr">
             <div className="pl-cn fx-r">
             {
-                products.map((product) => {
+                db.map((product) => {
                     return(
-                        <ProductCard product={product} />
+                        <ProductCard 
+                            product={product} 
+                            forComp={forComp}
+                        />
                     );
                 })
             }

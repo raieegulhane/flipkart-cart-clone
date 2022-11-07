@@ -6,7 +6,7 @@ export const Navbar = () => {
     const { cartState: { cartQty }} = useCart();
     return(
         <nav className="nav-wr fx-r">
-            <Link>
+            <Link to={"/"}>
                 <img 
                     className="nav-logo"
                     src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
@@ -17,7 +17,10 @@ export const Navbar = () => {
                 <div className="qty-badge">
                     { cartQty }
                 </div>
-                <Link className="nav-link fx-r">
+                <Link 
+                    to={"/cart"}
+                    className="nav-link fx-r"
+                >
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span>Cart</span>
                 </Link>

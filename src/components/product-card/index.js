@@ -1,6 +1,8 @@
 import "./product-card.css";
+import { useCart } from "../../contexts/cart-context";
+import { Link } from "react-router-dom";
 
-export const ProductCard = ({ product }) => {
+export const ProductCard = ({ product, forComp }) => {
     const {
         productName,
         brand,
@@ -11,6 +13,8 @@ export const ProductCard = ({ product }) => {
         fcAssured,
         productImg
     } = product
+
+    const { cartState: { cart }, cartDispatch } = useCart();
 
     return(
         <div className="pc-wr fx-c">
@@ -49,10 +53,62 @@ export const ProductCard = ({ product }) => {
                     </span>
                 </p>
             </div>
-            <button className="add-to-cart-btn"> 
-                <i className="fa-solid fa-cart-shopping"></i>
-                <span>Add to Cart</span>
-            </button>
+            {
+                forComp === "home" &&
+                <div className="fx-c">
+                {
+                    cart.find((item) => item === product) ?
+                    <Link 
+                        className="add-to-cart-btn fx-r"
+                        to={"/cart"}
+                    >
+                        <i className="fa-solid fa-cart-shopping"></i>
+                        <span>Go to Cart</span>
+                    </Link> :
+                    <button 
+                        className="add-to-cart-btn fx-r"
+                        onClick={() => cartDispatch({ type: "ADD_TO_CART", payload: product })}
+                    > 
+                        <i className="fa-solid fa-cart-shopping"></i>
+                        <span>Add to Cart</span>
+                    </button>
+                }
+                </div>
+            }
+            {
+                forComp === "cart-items" &&
+                <div className="fx-c cart-btn-cn">
+                    <button 
+                        className="add-to-cart-btn fx-r"
+                        onClick={() => cartDispatch({ type: "REMOVE_FROM_CART", payload: product })}
+                    > 
+                        <span>Remove from Cart</span>
+                    </button>
+                    <button 
+                        className="add-to-cart-btn fx-r"
+                        onClick={() => cartDispatch({ type: "SAVE_FOR_LATER", payload: product })}
+                    > 
+                        <span>Save for Later</span>
+                    </button>
+                </div>
+            }
+            {
+                forComp === "save-for-later" &&
+                <div className="fx-c cart-btn-cn">
+                    <button 
+                        className="add-to-cart-btn fx-r"
+                        onClick={() => cartDispatch({ type: "MOVE_TO_CART", payload: product })}
+                    > 
+                        <span>Move to Cart</span>
+                    </button>
+                    <button 
+                        className="add-to-cart-btn fx-r"
+                        onClick={() => cartDispatch({ type: "DELETE_FROM_SAVE_FOR_LATER", payload: product })}
+                    > 
+                        <span>Delete Item</span>
+                    </button>
+                </div>
+            }
         </div>
     );
 }

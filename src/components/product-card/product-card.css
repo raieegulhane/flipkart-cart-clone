@@ -25,3 +25,24 @@
     font-size: 1.5rem;
     color: var(--grey1);
 }
+
+.add-to-cart-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    background-color: var(--orange);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--orange2);
+}
+
+.cart-btn-cn {
+    gap: 0.25rem;
+}
